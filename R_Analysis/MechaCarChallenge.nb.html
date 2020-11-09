@@ -1833,13 +1833,96 @@ Coefficients:
        6.877e-02        -3.411e+00         3.546e+00  </code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>This is an <a href="http://rmarkdown.rstudio.com">R Markdown</a> Notebook. When you execute code within the notebook, the results appear beneath the code.</p>
-<p>Try executing this chunk by clicking the <em>Run</em> button within the chunk or by placing your cursor inside it and pressing <em>Ctrl+Shift+Enter</em>.</p>
-<!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChjYXJzKVxuYGBgIn0= -->
-<pre class="r"><code>plot(cars)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeShsbShmb3JtdWxhID0gbXBnIH4gdmVoaWNsZV9sZW5ndGggKyB2ZWhpY2xlX3dlaWdodCArIHNwb2lsZXJfYW5nbGUgKyBBV0QgKyBncm91bmRfY2xlYXJhbmNlLCBkYXRhID0gTWVjaGFDYXJfbXBnKSlcbmBgYCJ9 -->
+<pre class="r"><code>summary(lm(formula = mpg ~ vehicle_length + vehicle_weight + spoiler_angle + AWD + ground_clearance, data = MechaCar_mpg))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5DYWxsOlxubG0oZm9ybXVsYSA9IG1wZyB+IHZlaGljbGVfbGVuZ3RoICsgdmVoaWNsZV93ZWlnaHQgKyBzcG9pbGVyX2FuZ2xlICsgXG4gICAgQVdEICsgZ3JvdW5kX2NsZWFyYW5jZSwgZGF0YSA9IE1lY2hhQ2FyX21wZylcblxuUmVzaWR1YWxzOlxuICAgICBNaW4gICAgICAgMVEgICBNZWRpYW4gICAgICAgM1EgICAgICBNYXggXG4tMTkuNDcwMSAgLTQuNDk5NCAgLTAuMDY5MiAgIDUuNDQzMyAgMTguNTg0OSBcblxuQ29lZmZpY2llbnRzOlxuICAgICAgICAgICAgICAgICAgIEVzdGltYXRlIFN0ZC4gRXJyb3IgdCB2YWx1ZSBQcig+fHR8KSAgICBcbihJbnRlcmNlcHQpICAgICAgLTEuMDQwZSswMiAgMS41ODVlKzAxICAtNi41NTkgNS4wOGUtMDggKioqXG52ZWhpY2xlX2xlbmd0aCAgICA2LjI2N2UrMDAgIDYuNTUzZS0wMSAgIDkuNTYzIDIuNjBlLTEyICoqKlxudmVoaWNsZV93ZWlnaHQgICAgMS4yNDVlLTAzICA2Ljg5MGUtMDQgICAxLjgwNyAgIDAuMDc3NiAuICBcbnNwb2lsZXJfYW5nbGUgICAgIDYuODc3ZS0wMiAgNi42NTNlLTAyICAgMS4wMzQgICAwLjMwNjkgICAgXG5BV0QgICAgICAgICAgICAgIC0zLjQxMWUrMDAgIDIuNTM1ZSswMCAgLTEuMzQ2ICAgMC4xODUyICAgIFxuZ3JvdW5kX2NsZWFyYW5jZSAgMy41NDZlKzAwICA1LjQxMmUtMDEgICA2LjU1MSA1LjIxZS0wOCAqKipcbi0tLVxuU2lnbmlmLiBjb2RlczogIFxuMCDigJgqKirigJkgMC4wMDEg4oCYKirigJkgMC4wMSDigJgq4oCZIDAuMDUg4oCYLuKAmSAwLjEg4oCYIOKAmSAxXG5cblJlc2lkdWFsIHN0YW5kYXJkIGVycm9yOiA4Ljc3NCBvbiA0NCBkZWdyZWVzIG9mIGZyZWVkb21cbk11bHRpcGxlIFItc3F1YXJlZDogIDAuNzE0OSxcdEFkanVzdGVkIFItc3F1YXJlZDogIDAuNjgyNSBcbkYtc3RhdGlzdGljOiAyMi4wNyBvbiA1IGFuZCA0NCBERiwgIHAtdmFsdWU6IDUuMzVlLTExXG4ifQ== -->
+<pre><code>
+Call:
+lm(formula = mpg ~ vehicle_length + vehicle_weight + spoiler_angle + 
+    AWD + ground_clearance, data = MechaCar_mpg)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-19.4701  -4.4994  -0.0692   5.4433  18.5849 
+
+Coefficients:
+                   Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)      -1.040e+02  1.585e+01  -6.559 5.08e-08 ***
+vehicle_length    6.267e+00  6.553e-01   9.563 2.60e-12 ***
+vehicle_weight    1.245e-03  6.890e-04   1.807   0.0776 .  
+spoiler_angle     6.877e-02  6.653e-02   1.034   0.3069    
+AWD              -3.411e+00  2.535e+00  -1.346   0.1852    
+ground_clearance  3.546e+00  5.412e-01   6.551 5.21e-08 ***
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 8.774 on 44 degrees of freedom
+Multiple R-squared:  0.7149,    Adjusted R-squared:  0.6825 
+F-statistic: 22.07 on 5 and 44 DF,  p-value: 5.35e-11</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU3VzcGVuc2lvbkNvaWxEYXRhIDwtIHJlYWQuY3N2KFwiU3VzcGVuc2lvbl9Db2lsLmNzdlwiLCBjaGVjay5uYW1lcyA9IEYsIHN0cmluZ3NBc0ZhY3RvcnMgPSBGKSAjIHJlYWQgaW4gU3VzcGVuc2lvbl9Db2lsLmNzdlxuaGVhZChTdXNwZW5zaW9uQ29pbERhdGEpXG5gYGAifQ== -->
+<pre class="r"><code>SuspensionCoilData &lt;- read.csv(&quot;Suspension_Coil.csv&quot;, check.names = F, stringsAsFactors = F) # read in Suspension_Coil.csv
+head(SuspensionCoilData)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUJxVlIyMDZEUUJDZEFvdGhrM3FKMzFHeUZGcjZibCthYU5Kb1F2cG1Wa3BiSXU0MlhLS1AvcWY2SzYwRDdCTGsxVTBtTytmTWZlWnh1ZkhwaGdLQUNSYUtTVkFGKzI3dFRXZFRBTXRBTkVLTFUvOGY2SFhidUFKYzEyN0tZRWNCVzh3V1BUUm5ZWWQ4THdoOGhVZzBaeXpvUU1nWTYveTgwQStDUVdiclhwYmV2M1NBY1pNUHlCZktkMDkrV3ZrekloSDhMU2xVRTZZaW5TZzVwSEdXckphS3VIbmdvdHJ4dUt6eVZPeWZzWTR5bU91bjFTQ2prOHQzVjJldFd6RStvWG4yc0hTYzhVS1gxaVRkOHBLN3V4empFWjBHSVJmeVdLWlNZSkJSbjRVTWdrZjVnTGlxUk4zSmRoSWZLdkU2cVpkREczTXJZL1hiUGQxc1N4cG5sWXJvY3lWaW40cEU5NTd4bHlSVDRCSW5iZ1oyajdnZXZScUtiT0dXc3VUYWo4WXkwMHd6RzV4K0FiT2JIVXlPQWdBQSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["VehicleID"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Manufacturing_Lot"],"name":[2],"type":["chr"],"align":["left"]},{"label":["PSI"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"V40858","2":"Lot1","3":"1499","_rn_":"1"},{"1":"V40607","2":"Lot1","3":"1500","_rn_":"2"},{"1":"V31443","2":"Lot1","3":"1500","_rn_":"3"},{"1":"V6004","2":"Lot1","3":"1500","_rn_":"4"},{"1":"V7000","2":"Lot1","3":"1501","_rn_":"5"},{"1":"V17344","2":"Lot1","3":"1501","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTkFcbmBgYCJ9 -->
+<pre class="r"><code>NA</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudG90YWxfc3VtbWFyeSA8LSBTdXNwZW5zaW9uQ29pbERhdGEgJT4lIHN1bW1hcml6ZShNZWFuPW1lYW4oUFNJKSwgTWVkaWFuPW1lZGlhbihQU0kpLCBWYXJpYW5jZT12YXIoUFNJKSxTRD1zZChQU0kpLCAuZ3JvdXBzID0gJ2tlZXAnKSAjY3JlYXRlIHRvdGFsIHN1bW1hcnkgdGFibGVcbnRvdGFsX3N1bW1hcnlcbmBgYCJ9 -->
+<pre class="r"><code>total_summary &lt;- SuspensionCoilData %&gt;% summarize(Mean=mean(PSI), Median=median(PSI), Variance=var(PSI),SD=sd(PSI), .groups = &#39;keep&#39;) #create total summary table
+total_summary</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MSwibmNvbCI6NH0sInJkZiI6Ikg0c0lBQUFBQUFBQUJndHlpVERtaXVCaVlHQmdabUFCWW1aV0lKT0J6VG5BME1qVWlJR0JoUW5JWXdUS2NJTG9DcUFxWVNDREJZajVRQUlPMDdQbGRnUytia1h3Q3hpZ0FNTDNWNTNzOWsvbEo1d3ZQNGxudjUrcU1wckJySG1KdWFuRlFJWUEySENJSUl0dmFtSWVsTTNtbTVxU0NlZHhoQ1VXQVhuSnFWQStVN0FMbW9HY1JmbmxlakJEZWNFU1lJeHFhM0pPWWpITVZwZ2dWMHBpU2FKZVdoRlFMNUQzRDAwTGUzNUJTV1orSGxBVEV5Z2NXTkUwTXhhaENmQ1g1b0Zja2FLYm5GR2FsNjFyQ0xJQTZob0dWSmZCMlN3UUs1bitRNDFpaFFWQmFsNTZaaDdNeTZ3NWlVbXBPVkFPSDlDM1lNL3FGUlJsNXBYQWZBSVVMZFlyeVM5SmhLbmpTczdQZ1ltQS9jYndEd0JIKy9uNC93RUFBQT09In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Mean"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["Median"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Variance"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["SD"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"1498.78","2":"1500","3":"62.29356","4":"7.892627"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[1]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubG90X3N1bW1hcnkgPC0gU3VzcGVuc2lvbkNvaWxEYXRhICU+JSBncm91cF9ieShNYW51ZmFjdHVyaW5nX0xvdCkgJT4lIHN1bW1hcml6ZShNZWFuPW1lYW4oUFNJKSxNZWRpYW49bWVkaWFuKFBTSSksVmFyaWFuY2U9dmFyKFBTSSksU0Q9c2QoUFNJKSwgLmdyb3VwcyA9ICdrZWVwJykgI2NyZWF0ZSBsb3Qgc3VtbWFyeSB0YWJsZVxubG90X3N1bW1hcnlcbmBgYCJ9 -->
+<pre class="r"><code>lot_summary &lt;- SuspensionCoilData %&gt;% group_by(Manufacturing_Lot) %&gt;% summarize(Mean=mean(PSI),Median=median(PSI),Variance=var(PSI),SD=sd(PSI), .groups = &#39;keep&#39;) #create lot summary table
+lot_summary</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImdyb3VwZWRfZGYiLCJ0YmxfZGYiLCJ0YmwiLCJkYXRhLmZyYW1lIl0sIm5yb3ciOjMsIm5jb2wiOjV9LCJyZGYiOiJINHNJQUFBQUFBQUFCZ3R5aVREbWl1QmlZR0JnWm1BQlltWldJSk9CelRuQTBNalVpSUdCaFFuSVl3VEtjSUxvQ3FBcVlTQURwRVlBcWdVa3dlS1RYMktJeERaQ1loc0RhVDZRV29mcEJTQ2pHWUQwR1NBNDZ6QTlvVDlHNCt0aExQSlFPb3NCQ3NEeTl1OGpMdnc2MW43TlFmYkJjbjFXeXdxSFZFLzFWeTRLc3hEeXEzL3BTUjhOZFdDOWF6RzVaeDZqZzVha2UrVEhUazgwVDdBbTV5UVdGME05QUJQa1Nra3NTZFJMSzByTVRVVlR6bG1VWDY2WEJ4UUhhZUVGWXFZR0lQSC8vLysvNk9iQ0ZBbUFBd2dpS09pYm1GZWFscGhjVWxxVW1aY2VEd3dPV01qNHBpYm1RZGxzdnFrcG1YQWVSMWhpRVpDWG5BcmxNd1c3QU1sL2FMYXg1eGVVWk9ibkFlMWpRbzRRZUV3Vm9RbndsK2FCM0plaW01eFJtcGV0YXdMeU0xZ2FBbmloYkdZa05pdkVTcGIvYUg1aVM4MUx6OHlET1k4MUp6RXBOUWZLNFFNR0ZqZ1k5QXFBL29YNWxRc29XcXhYa2wrU0NGUEhsWnlmQXhNQis0M2hId0E2MjNsTWlBSUFBQT09In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Manufacturing_Lot"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Mean"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Median"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Variance"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["SD"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"Lot1","2":"1500.00","3":"1500.0","4":"0.9795918","5":"0.9897433"},{"1":"Lot2","2":"1500.20","3":"1500.0","4":"7.4693878","5":"2.7330181"},{"1":"Lot3","2":"1496.14","3":"1498.5","4":"170.2861224","5":"13.0493725"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<pre><code>
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChjYXJzKVxuYGBgIn0= --&gt;
+
+```r
+plot(cars)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1848,7 +1931,7 @@ Coefficients:
 <p>The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.</p>
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KYGBge3J9DQpzZXR3ZCgiQzovVXNlcnMvY2Fyb2MvRGVza3RvcC9SX0FuYWx5c2lzL01lY2hhQ2FyX1N0YXRpc3RpY2FsX0FuYWx5c2lzL1JfQW5hbHlzaXMiKQ0KYGBgDQpgYGB7cn0NCk1lY2hhQ2FyX21wZyA8LSByZWFkLmNzdignTWVjaGFDYXJfbXBnLmNzdicsY2hlY2submFtZXMgPSBGLHN0cmluZ3NBc0ZhY3RvcnMgPSBGKSAjIHJlYWQgaW4gY3N2DQpoZWFkKE1lY2hhQ2FyX21wZykNCmBgYA0KYGBge3J9DQpsbShtcGcgfiB2ZWhpY2xlX2xlbmd0aCArIHZlaGljbGVfd2VpZ2h0ICsgc3BvaWxlcl9hbmdsZSArIEFXRCArIGdyb3VuZF9jbGVhcmFuY2UsIGRhdGE9TWVjaGFDYXJfbXBnKSAjIHBlcmZvcm0gbGluZWFyIHJlZ3Jlc3Npb24gb24gTWVjaGFDYXJfbXBnIGRhdGENCmBgYA0KDQpUaGlzIGlzIGFuIFtSIE1hcmtkb3duXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tKSBOb3RlYm9vay4gV2hlbiB5b3UgZXhlY3V0ZSBjb2RlIHdpdGhpbiB0aGUgbm90ZWJvb2ssIHRoZSByZXN1bHRzIGFwcGVhciBiZW5lYXRoIHRoZSBjb2RlLiANCg0KVHJ5IGV4ZWN1dGluZyB0aGlzIGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqUnVuKiBidXR0b24gd2l0aGluIHRoZSBjaHVuayBvciBieSBwbGFjaW5nIHlvdXIgY3Vyc29yIGluc2lkZSBpdCBhbmQgcHJlc3NpbmcgKkN0cmwrU2hpZnQrRW50ZXIqLiANCg0KYGBge3J9DQpwbG90KGNhcnMpDQpgYGANCg0KQWRkIGEgbmV3IGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqSW5zZXJ0IENodW5rKiBidXR0b24gb24gdGhlIHRvb2xiYXIgb3IgYnkgcHJlc3NpbmcgKkN0cmwrQWx0K0kqLg0KDQpXaGVuIHlvdSBzYXZlIHRoZSBub3RlYm9vaywgYW4gSFRNTCBmaWxlIGNvbnRhaW5pbmcgdGhlIGNvZGUgYW5kIG91dHB1dCB3aWxsIGJlIHNhdmVkIGFsb25nc2lkZSBpdCAoY2xpY2sgdGhlICpQcmV2aWV3KiBidXR0b24gb3IgcHJlc3MgKkN0cmwrU2hpZnQrSyogdG8gcHJldmlldyB0aGUgSFRNTCBmaWxlKS4NCg0KVGhlIHByZXZpZXcgc2hvd3MgeW91IGEgcmVuZGVyZWQgSFRNTCBjb3B5IG9mIHRoZSBjb250ZW50cyBvZiB0aGUgZWRpdG9yLiBDb25zZXF1ZW50bHksIHVubGlrZSAqS25pdCosICpQcmV2aWV3KiBkb2VzIG5vdCBydW4gYW55IFIgY29kZSBjaHVua3MuIEluc3RlYWQsIHRoZSBvdXRwdXQgb2YgdGhlIGNodW5rIHdoZW4gaXQgd2FzIGxhc3QgcnVuIGluIHRoZSBlZGl0b3IgaXMgZGlzcGxheWVkLg0K</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KYGBge3J9DQpzZXR3ZCgiQzovVXNlcnMvY2Fyb2MvRGVza3RvcC9SX0FuYWx5c2lzL01lY2hhQ2FyX1N0YXRpc3RpY2FsX0FuYWx5c2lzL1JfQW5hbHlzaXMiKQ0KYGBgDQpgYGB7cn0NCk1lY2hhQ2FyX21wZyA8LSByZWFkLmNzdignTWVjaGFDYXJfbXBnLmNzdicsY2hlY2submFtZXMgPSBGLHN0cmluZ3NBc0ZhY3RvcnMgPSBGKSAjIHJlYWQgaW4gY3N2DQpoZWFkKE1lY2hhQ2FyX21wZykNCmBgYA0KYGBge3J9DQpsbShtcGcgfiB2ZWhpY2xlX2xlbmd0aCArIHZlaGljbGVfd2VpZ2h0ICsgc3BvaWxlcl9hbmdsZSArIEFXRCArIGdyb3VuZF9jbGVhcmFuY2UsIGRhdGE9TWVjaGFDYXJfbXBnKSAjIHBlcmZvcm0gbGluZWFyIHJlZ3Jlc3Npb24gb24gTWVjaGFDYXJfbXBnIGRhdGENCmBgYA0KYGBge3J9DQpzdW1tYXJ5KGxtKGZvcm11bGEgPSBtcGcgfiB2ZWhpY2xlX2xlbmd0aCArIHZlaGljbGVfd2VpZ2h0ICsgc3BvaWxlcl9hbmdsZSArIEFXRCArIGdyb3VuZF9jbGVhcmFuY2UsIGRhdGEgPSBNZWNoYUNhcl9tcGcpKQ0KYGBgDQpgYGB7cn0NClN1c3BlbnNpb25Db2lsRGF0YSA8LSByZWFkLmNzdigiU3VzcGVuc2lvbl9Db2lsLmNzdiIsIGNoZWNrLm5hbWVzID0gRiwgc3RyaW5nc0FzRmFjdG9ycyA9IEYpICMgcmVhZCBpbiBTdXNwZW5zaW9uX0NvaWwuY3N2DQpoZWFkKFN1c3BlbnNpb25Db2lsRGF0YSkNCmBgYA0KYGBge3J9DQp0b3RhbF9zdW1tYXJ5IDwtIFN1c3BlbnNpb25Db2lsRGF0YSAlPiUgc3VtbWFyaXplKE1lYW49bWVhbihQU0kpLCBNZWRpYW49bWVkaWFuKFBTSSksIFZhcmlhbmNlPXZhcihQU0kpLFNEPXNkKFBTSSksIC5ncm91cHMgPSAna2VlcCcpICNjcmVhdGUgdG90YWwgc3VtbWFyeSB0YWJsZQ0KdG90YWxfc3VtbWFyeQ0KYGBgDQpgYGB7cn0NCmxvdF9zdW1tYXJ5IDwtIFN1c3BlbnNpb25Db2lsRGF0YSAlPiUgZ3JvdXBfYnkoTWFudWZhY3R1cmluZ19Mb3QpICU+JSBzdW1tYXJpemUoTWVhbj1tZWFuKFBTSSksTWVkaWFuPW1lZGlhbihQU0kpLFZhcmlhbmNlPXZhcihQU0kpLFNEPXNkKFBTSSksIC5ncm91cHMgPSAna2VlcCcpICNjcmVhdGUgbG90IHN1bW1hcnkgdGFibGUNCmxvdF9zdW1tYXJ5DQpgYGANCg0KYGBgDQoNClRoaXMgaXMgYW4gW1IgTWFya2Rvd25dKGh0dHA6Ly9ybWFya2Rvd24ucnN0dWRpby5jb20pIE5vdGVib29rLiBXaGVuIHlvdSBleGVjdXRlIGNvZGUgd2l0aGluIHRoZSBub3RlYm9vaywgdGhlIHJlc3VsdHMgYXBwZWFyIGJlbmVhdGggdGhlIGNvZGUuIA0KDQpUcnkgZXhlY3V0aW5nIHRoaXMgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpSdW4qIGJ1dHRvbiB3aXRoaW4gdGhlIGNodW5rIG9yIGJ5IHBsYWNpbmcgeW91ciBjdXJzb3IgaW5zaWRlIGl0IGFuZCBwcmVzc2luZyAqQ3RybCtTaGlmdCtFbnRlciouIA0KDQpgYGB7cn0NCnBsb3QoY2FycykNCmBgYA0KDQpBZGQgYSBuZXcgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpJbnNlcnQgQ2h1bmsqIGJ1dHRvbiBvbiB0aGUgdG9vbGJhciBvciBieSBwcmVzc2luZyAqQ3RybCtBbHQrSSouDQoNCldoZW4geW91IHNhdmUgdGhlIG5vdGVib29rLCBhbiBIVE1MIGZpbGUgY29udGFpbmluZyB0aGUgY29kZSBhbmQgb3V0cHV0IHdpbGwgYmUgc2F2ZWQgYWxvbmdzaWRlIGl0IChjbGljayB0aGUgKlByZXZpZXcqIGJ1dHRvbiBvciBwcmVzcyAqQ3RybCtTaGlmdCtLKiB0byBwcmV2aWV3IHRoZSBIVE1MIGZpbGUpLg0KDQpUaGUgcHJldmlldyBzaG93cyB5b3UgYSByZW5kZXJlZCBIVE1MIGNvcHkgb2YgdGhlIGNvbnRlbnRzIG9mIHRoZSBlZGl0b3IuIENvbnNlcXVlbnRseSwgdW5saWtlICpLbml0KiwgKlByZXZpZXcqIGRvZXMgbm90IHJ1biBhbnkgUiBjb2RlIGNodW5rcy4gSW5zdGVhZCwgdGhlIG91dHB1dCBvZiB0aGUgY2h1bmsgd2hlbiBpdCB3YXMgbGFzdCBydW4gaW4gdGhlIGVkaXRvciBpcyBkaXNwbGF5ZWQuDQo=</div>
 
 
 
