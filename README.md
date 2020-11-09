@@ -12,7 +12,11 @@
 
 ## Summary Statistics on Suspension Coils
 
+![Lot Summary Table](Screenshots/Suspension_Coil%20Lot%20Summary%20Table.png)
+
 ## T-Test on Suspension Coils
+
+![PSI Plot](Screenshots/Suspension_Coil%20PSI%20Plot.png)
 
 ## Study Comparing MechaCar to the Competition
 

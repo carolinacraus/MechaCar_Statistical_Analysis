@@ -27,6 +27,9 @@ total_summary
 lot_summary <- SuspensionCoilData %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI),Median=median(PSI),Variance=var(PSI),SD=sd(PSI), .groups = 'keep') #create lot summary table
 lot_summary
 ```
+```{r}
+sample_table <- SuspensionCoilData %>% sample_n(50) # random sample 50 data points
+```
 
 ```
 
