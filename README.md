@@ -50,3 +50,10 @@ Lot #3 T-Test
 
 ## Study Comparing MechaCar to the Competition
 
+**Metrics to Test** 
+- braking distance 
+- fuel economy 
+- safety rating
+
+**Null Hypothesis**
+The mean 
