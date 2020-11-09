@@ -28,6 +28,10 @@ Total Summary Table
 Lot Summary Table
 ![Lot Summary Table](Screenshots/Suspension_Coil%20Lot%20Summary%20Table.png)
 
+The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. 
+
+The current manufacturing data meet this design specification for Lot #1 and Lot #2 manufacturing lots in total and each lot individually. owever, Lots #3 has more variances from the mean and median. 
+
 ## T-Test on Suspension Coils
 PSI Plot
 ![PSI Plot](Screenshots/Suspension_Coil%20PSI%20Plot.png)
