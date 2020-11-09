@@ -56,4 +56,4 @@ Lot #3 T-Test
 - safety rating
 
 **Null Hypothesis**
-The mean 
+The mean and distribution of points between MechaCar and a competition would be similar. 
